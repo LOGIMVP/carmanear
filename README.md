@@ -3,97 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARMANEAR | OFFICIAL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
+    <title>CARMANEAR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Reset default browser margins */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #000; /* Keep the top border black */
-            font-family: sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-
-        /* --- Section 1: Band Name Header (Matches original) --- */
-        .top-header {
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            letter-spacing: 0.1em;
-            margin: 0;
-        }
-
-        /* --- Section 2: White Background, Wide Image Container --- */
-        /* This section spans full width, removing the "red area" */
-        .image-section {
-            background-color: #fff;
-            width: 100vw; /* Spans full viewport width */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* Adjust padding to control spacing around the image */
-            padding: 40px 0;
-        }
-
-        /* Container to keep content centered on large screens */
-        .content-container {
-            width: 100%;
-            max-width: 1200px; /* Maximum content width to look good on desktops */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* --- Band Name inside White Area (Large, bold, centers) --- */
-        .band-title {
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 3rem; /* Increase as desired for impact */
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 30px;
-            color: #000;
-            text-align: center;
-        }
-
-        /* --- Vertical Image (Centers and fits max possible area) --- */
-        .artist-image {
-            width: 100%;
-            max-width: 500px; /* Limits portrait image from being *too* large on big screens */
-            height: auto;
-            object-fit: contain; /* Shows entire portrait image without cutting it off */
-            display: block; /* Removes any default inline-block spacing */
-        }
-
-        /* --- MOBILE/TABLET STYLES --- */
-        @media (max-width: 768px) {
-            .band-title {
-                font-size: 2rem;
-            }
-            .artist-image {
-                max-width: 90%; /* On phones, image fills almost the whole width */
-            }
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+        body { background-color: #000000; color: #ffffff; margin: 0; }
+        .font-syne { font-family: 'Syne', sans-serif; }
     </style>
 </head>
-<body>
+<body class="bg-black min-h-screen flex flex-col items-center justify-center p-6">
 
-    <div class="top-header">
-        <h1>carmanear</h1>
-    </div>
+    <div class="w-full max-w-lg flex flex-col items-center">
+        
+        <h1 class="font-syne text-5xl md:text-8xl mb-8 tracking-tighter uppercase text-center">
+            CARMANEAR
+        </h1>
 
-    <div class="image-section">
-        <div class="content-container">
-            <h2 class="band-title">CARMANEAR</h2>
-            
-            <img src="carmanear_albumart.jpg" alt="CARMANEAR" class="artist-image">
+        <div class="w-full mb-10 flex justify-center">
+            <img src="carmanear_albumart.jpg" alt="CARMANEAR" class="max-w-full h-auto max-h-[70vh] shadow-[0_0_60px_rgba(255,255,255,0.1)] border border-zinc-900 rounded-sm">
         </div>
+
+        <div class="flex flex-col items-center space-y-8 w-full">
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.4em] text-zinc-500 uppercase mb-2">New Release</p>
+                <a href="YOUR_SPOTIFY_LINK" target="_blank" class="text-2xl font-bold uppercase tracking-widest border-b-2 border-white pb-1 hover:text-zinc-400 hover:border-zinc-400 transition-all">
+                    Spotify
+                </a>
+            </div>
+
+            <div class="text-center pt-4">
+                <p class="text-[10px] tracking-[0.4em] text-zinc-500 uppercase mb-2">Contact</p>
+                <a href="mailto:contact@carmanear.com" class="text-sm tracking-widest text-zinc-400 hover:text-white transition uppercase">
+                    contact@carmanear.com
+                </a>
+            </div>
+        </div>
+
     </div>
 
 </body>
