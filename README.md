@@ -3,85 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARMANEAR | OFFICIAL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    <title>CARMANEAR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* This prevents the page from having black bars on the sides on desktops */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow-x: hidden;
-            background-color: #f8f8f8; /* A light off-white, matching the header */
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: #000; }
+        
+        .bg-image {
+            background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('carmanear_albumart.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
 
-        /* --- Global Font Setup --- */
-        .sans-font { font-family: sans-serif; }
         .serif-font { font-family: 'Cormorant Garamond', serif; }
+        .sans-font { font-family: 'Inter', sans-serif; }
 
-        /* --- THE LOGO CHALLENGE (Overlapping two-line design) --- */
-        /* We place the "Carmanear" word in two separate containers to force them to overlap */
-        .central-logo {
+        /* This creates the exact stacked/overlapping logo look */
+        .logo-stack {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            position: relative;
-            z-index: 10;
+            line-height: 0.6; /* Critical for the overlap */
         }
-
-        .overlapping-logo-text {
-            display: inline-block;
-            position: relative;
-            line-height: 0.1; /* This is the key that forces the lines to cross */
-        }
-
-        .logo-word {
-            display: block;
-            position: relative;
-        }
-
-        /* Adjust the negative margin of the bottom word to control the exact overlap */
-        .logo-bottom-word {
-            margin-top: -10px; /* Play with this number until the 'W' overlaps the text above */
+        .logo-second-word {
+            margin-top: -5px; /* Adjusts the vertical overlap */
+            margin-left: 40px; /* Offsets 'near' to the right like the example */
         }
     </style>
 </head>
-<body class="sans-font text-[10px] tracking-[0.4em] uppercase text-black">
+<body class="flex flex-col justify-between items-center h-screen w-screen text-white py-12 px-6">
 
-    <div class="page-wrap flex flex-col min-h-screen">
-        
-        <header class="w-full bg-[#f8f8f8] border-b border-zinc-200 h-[70px] flex justify-center items-center">
-            <div class="flex space-x-10 text-xs">
-                <a href="#" class="hover:opacity-50 transition">INSTAGRAM</a>
-                <a href="#" class="hover:opacity-50 transition">TIKTOK</a>
-                <a href="#" class="hover:opacity-50 transition">SPOTIFY</a>
-            </div>
-        </header>
+    <div class="bg-image"></div>
 
-        <main class="main-content flex-grow flex justify-center items-center relative overflow-hidden bg-black">
-            <img src="carmanear_albumart.jpg" alt="CARMANEAR" class="w-full h-full object-cover">
-        </main>
-
-        <div class="absolute inset-0 flexjustify-center items-center h-full pt-[70px] pb-[70px]">
-            <div class="central-logo">
-                <div class="overlapping-logo-text serif-font text-white text-7xl md:text-[140px] tracking-tight leading-none text-center">
-                    
-                    <span class="logo-word logo-top-word">Carma</span>
-                    
-                    <span class="logo-word logo-bottom-word">near</span>
-                </div>
-            </div>
-        </div>
-
-        <footer class="w-full bg-[#f8f8f8] border-t border-zinc-200 h-[70px] flex justify-center items-center">
-            <nav class="flex space-x-10 md:space-x-16 text-xs text-black">
-                <a href="YOUR_SPOTIFY_LINK" target="_blank" class="hover:opacity-50 transition">Listen</a>
-                <a href="mailto:contact@carmanear.com" class="hover:opacity-50 transition">Contact</a>
-            </nav>
-        </footer>
-
+    <div class="flex space-x-8 text-lg opacity-90">
+        <a href="#" class="hover:opacity-50 transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:opacity-50 transition"><i class="fa-brands fa-spotify"></i></a>
+        <a href="#" class="hover:opacity-50 transition"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="hover:opacity-50 transition"><i class="fa-brands fa-youtube"></i></a>
     </div>
+
+    <div class="logo-stack serif-font italic select-none">
+        <span class="text-7xl md:text-[130px] tracking-tighter">Carma</span>
+        <span class="logo-second-word text-7xl md:text-[130px] tracking-tighter">near</span>
+    </div>
+
+    <nav class="sans-font text-[10px] md:text-xs tracking-[0.5em] uppercase opacity-90">
+        <a href="mailto:contact@carmanear.com" class="hover:opacity-40 transition border-b border-transparent hover:border-white pb-1">
+            Contact Us
+        </a>
+    </nav>
 
 </body>
 </html>
