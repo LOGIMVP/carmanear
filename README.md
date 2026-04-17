@@ -22,20 +22,20 @@
         </h1>
 
         <div class="w-full mb-10 bg-zinc-900 rounded-sm border border-zinc-800 shadow-2xl">
-            <img src="./carmanear_albumart.jpg" alt="CARMANEAR" class="w-full h-auto block">
+            <img src="carmanear_albumart.jpg?v=1" alt="CARMANEAR" class="w-full h-auto block">
         </div>
 
         <div class="space-y-10">
             <div class="flex flex-col items-center">
                 <p class="text-[10px] uppercase tracking-[0.4em] text-zinc-500 mb-3">Latest Release</p>
-                <a href="#" target="_blank" class="text-2xl font-bold border-b-2 border-white hover:text-zinc-400 hover:border-zinc-400 transition-all pb-1 uppercase tracking-widest">
+                <a href="#" target="_blank" class="text-2xl font-bold border-b-2 border-white hover:text-zinc-400 hover:border-zinc-400 transition-all pb-1 uppercase tracking-widest text-white no-underline">
                     Spotify
                 </a>
             </div>
             
             <div class="flex flex-col items-center">
                 <p class="text-[10px] uppercase tracking-[0.4em] text-zinc-500 mb-2">Inquiries</p>
-                <a href="mailto:contact@carmanear.com" class="text-sm text-zinc-300 hover:text-white transition tracking-widest border-b border-transparent hover:border-zinc-500">
+                <a href="mailto:contact@carmanear.com" class="text-sm text-zinc-300 hover:text-white transition tracking-widest border-b border-transparent hover:border-zinc-500 no-underline">
                     contact@carmanear.com
                 </a>
             </div>
